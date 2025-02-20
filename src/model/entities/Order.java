@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order implements ProductManagement {
+    
     private final List<Product> products = new ArrayList<>();
     private Client client;
     private OrderStatus status = OrderStatus.PENDING_PAYMENT;

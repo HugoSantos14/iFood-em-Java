@@ -3,6 +3,7 @@ package model.entities;
 import model.enums.CuisineType;
 
 public class Food extends Product {
+    
     private CuisineType cuisine;
     private boolean vegetarian;
     private boolean vegan;

@@ -1,6 +1,7 @@
 package model.entities;
 
 public class RestaurantOwner extends User {
+    
     private Restaurant restaurant;
 
     public RestaurantOwner(String login, String password, Restaurant restaurant) {

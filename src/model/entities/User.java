@@ -1,6 +1,7 @@
 package model.entities;
 
 public abstract class User {
+    
     private String login;
     private String password;
 

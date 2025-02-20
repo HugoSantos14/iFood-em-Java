@@ -1,6 +1,7 @@
 package model.entities;
 
 public abstract class Product {
+    
     private String name;
     private String description;
     private double price;

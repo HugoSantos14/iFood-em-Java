@@ -1,6 +1,7 @@
 package model.entities;
 
 public class Drink extends Product {
+    
     private int amount;
     private boolean alcoholic;
 

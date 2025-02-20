@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant implements ProductManagement {
+    
     private String name;
     private String address;
     private final List<Product> products = new ArrayList<>();
