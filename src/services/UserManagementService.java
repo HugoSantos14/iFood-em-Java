@@ -3,6 +3,7 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.contracts.UserService;
 import model.entities.User;
 
 public class UserManagementService {

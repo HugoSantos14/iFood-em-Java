@@ -1,12 +1,11 @@
 package model.entities;
 
-import model.contracts.ProductManagement;
 import model.enums.OrderStatus;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order implements ProductManagement {
+public class Order {
     
     private final List<Product> products = new ArrayList<>();
     private Client client;
@@ -34,15 +33,5 @@ public class Order implements ProductManagement {
 
     public void setStatus(OrderStatus status) {
         this.status = status;
-    }
-
-    @Override
-    public void addProduct(Product product) {
-        products.add(product);
-    }
-
-    @Override
-    public void removeProduct(Product product) {
-        products.remove(product);
     }
 }

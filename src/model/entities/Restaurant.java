@@ -1,11 +1,9 @@
 package model.entities;
 
-import model.contracts.ProductManagement;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant implements ProductManagement {
+public class Restaurant {
     
     private String name;
     private String address;
@@ -34,15 +32,5 @@ public class Restaurant implements ProductManagement {
 
     public List<Product> getProducts() {
         return products;
-    }
-
-    @Override
-    public void addProduct(Product product) {
-        products.add(product);
-    }
-
-    @Override
-    public void removeProduct(Product product) {
-        products.remove(product);
     }
 }

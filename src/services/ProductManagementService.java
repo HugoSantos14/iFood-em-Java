@@ -5,7 +5,7 @@ import java.util.List;
 
 import model.entities.Product;
 
-public class ProductManagementService {
+public class ProductManagementService  {
 
     private final List<Product> products = new ArrayList<>();
 
