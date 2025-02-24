@@ -3,15 +3,25 @@ package model.entities;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Restaurant {
-    
+public final class Tent {
+
+    private int id;
+
     private String name;
     private String address;
     private final List<Product> products = new ArrayList<>();
 
-    public Restaurant(String name, String address) {
+    public Tent(String name, String address) {
         this.name = name;
         this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

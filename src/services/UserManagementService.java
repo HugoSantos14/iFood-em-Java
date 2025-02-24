@@ -3,20 +3,35 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.contracts.UserService;
+import model.contracts.ManagementService;
 import model.entities.User;
 
-public class UserManagementService {
-    
-    private final List<User> users = new ArrayList<>();
+public class UserManagementService implements ManagementService<User> {
 
-    public void addUser(User user) {
+    private static final List<User> users = new ArrayList<>();
+    private static int idCounter = 0;
+
+    @Override
+    public void create(User user) {
+        user.setId(idCounter++);
         users.add(user);
-        System.out.println("Usuário adicionado: " + user.getLogin());
+        System.out.println("Usuário cadastrado: " + user.getName());
     }
 
-    public void removeUser(String username) {
-        users.removeIf(user -> user.getLogin().equalsIgnoreCase(username));
-        System.out.println("Usuário removido: " + username);
+    @Override
+    public void remove(User user) {
+        users.remove(user);
+        System.out.println("Usuário excluído: " + user.getName());
+    }
+
+    @Override
+    public User getById(int id) {
+        for (User user : users) {
+            if (user.getId() == id) {
+                return user;
+            }
+        }
+
+        return null;
     }
 }

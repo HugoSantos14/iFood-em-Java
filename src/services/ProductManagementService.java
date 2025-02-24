@@ -3,23 +3,35 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.contracts.ManagementService;
 import model.entities.Product;
 
-public class ProductManagementService  {
+public class ProductManagementService implements ManagementService<Product> {
 
-    private final List<Product> products = new ArrayList<>();
+    private static final List<Product> products = new ArrayList<>();
+    private static int idCounter = 0;
 
-    public void addProduct(Product product) {
+    @Override
+    public void create(Product product) {
+        product.setId(idCounter++);
         products.add(product);
-        System.out.println("Produto adicionado: " + product.getName());
+        System.out.println("Produto cadastrado: " + product.getName());
     }
 
-    public void removeProduct(String productName) {
-        products.removeIf(product -> product.getName().equalsIgnoreCase(productName));
-        System.out.println("Produto removido: " + productName);
+    @Override
+    public void remove(Product product) {
+        products.remove(product);
+        System.out.println("Produto excluído: " + product.getName());
     }
 
-    public List<Product> getAllProducts() {
-        return new ArrayList<>(products);
+    @Override
+    public Product getById(int id) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                return product;
+            }
+        }
+
+        return null;
     }
 }

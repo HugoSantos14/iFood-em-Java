@@ -5,7 +5,7 @@ import model.enums.OrderStatus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order {
+public final class Order {
     
     private final List<Product> products = new ArrayList<>();
     private Client client;

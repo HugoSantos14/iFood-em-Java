@@ -1,29 +1,20 @@
 package model.entities;
 
-import model.enums.CuisineType;
+import model.enums.ProductCategory;
 
 public class Food extends Product {
     
-    private CuisineType cuisine;
     private boolean vegetarian;
     private boolean vegan;
 
-    public Food(String name, CuisineType cuisine) {
-        super(name);
-        this.cuisine = cuisine;
+    public Food(String name, ProductCategory category) {
+        super(name, category);
     }
 
-    public Food(String name, String description, double price, int preparationTime, CuisineType cuisine) {
-        super(name, description, price, preparationTime);
-        this.cuisine = cuisine;
-    }
-
-    public CuisineType getCuisine() {
-        return cuisine;
-    }
-
-    public void setCuisine(CuisineType cuisine) {
-        this.cuisine = cuisine;
+    public Food(String name, String description, double price, int preparationTime, ProductCategory category, boolean vegetarian, boolean vegan) {
+        super(name, description, price, preparationTime, category);
+        this.vegetarian = vegetarian;
+        this.vegan = vegan;
     }
 
     public boolean isVegetarian() {
