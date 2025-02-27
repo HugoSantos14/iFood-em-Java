@@ -5,7 +5,7 @@ import model.entities.Tent;
 import java.util.ArrayList;
 import java.util.List;
 
-public enum Fair {
+public enum Marketplace {
     VER_O_PESO("Ver-O-Peso", "Blvd. Castilhos França – Campina, Belém – PA"),
     JURUNAS("Jurunas", "Av. Bernardo Sayão, 1444 – Jurunas, Belém – PA"),
     CREMACAO("Cremação", "Passagem São Silvestre, 62 – Cremação, Belém – PA"),
@@ -18,7 +18,7 @@ public enum Fair {
     private String adress;
     private final List<Tent> tents = new ArrayList<>();
 
-    Fair(String name, String adress) {
+    Marketplace(String name, String adress) {
         this.name = name;
         this.adress = adress;
     }

@@ -1,26 +1,26 @@
 package model.entities;
 
-import model.enums.Fair;
+import model.enums.Marketplace;
 
 public class DeliveryMan extends User {
 
-    private Fair fair;
+    private Marketplace marketplace;
     private int age;
     private String motorcyclePlate;
 
-    public DeliveryMan(String name, String login, String password, Fair fair, int age, String motorcyclePlate) {
+    public DeliveryMan(String name, String login, String password, Marketplace marketplace, int age, String motorcyclePlate) {
         super(name, login, password);
-        this.fair = fair;
+        this.marketplace = marketplace;
         setAge(age);
         this.motorcyclePlate = motorcyclePlate;
     }
 
-    public Fair getFair() {
-        return fair;
+    public Marketplace getMarketplace() {
+        return marketplace;
     }
 
-    public void setFair(Fair fair) {
-        this.fair = fair;
+    public void setMarketplace(Marketplace marketplace) {
+        this.marketplace = marketplace;
     }
 
     public int getAge() {
