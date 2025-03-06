@@ -14,8 +14,8 @@ public enum Marketplace {
     SANTA_LUZIA("Santa Luzia", "Tv. Dom Pedro I, 1152-1200 – Umarizal, Belém – PA"),
     TELEGRAFO("Telégrafo", "Av. Sen. Lemos, 1448 – Telégrafo, Belém – PA");
 
-    private String name;
-    private String adress;
+    private final String name;
+    private final String adress;
     private final List<Tent> tents = new ArrayList<>();
 
     Marketplace(String name, String adress) {

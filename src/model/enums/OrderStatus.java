@@ -6,7 +6,7 @@ public enum OrderStatus {
     SHIPPING("Enviado"),
     DELIVERED("Entregue");
 
-    private String description;
+    private final String description;
 
     OrderStatus(String description) {
         this.description = description;

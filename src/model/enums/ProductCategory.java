@@ -10,7 +10,7 @@ public enum ProductCategory {
     PULPS_AND_FRUITS("Polpas e frutas"),
     MEALS("Refeições");
 
-    private String description;
+    private final String description;
 
     ProductCategory(String description) {
         this.description = description;
